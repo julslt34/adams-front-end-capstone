@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Mary Hively",
+      "email": "mhively0@singer.com",
+      "isStaff": false
+    },
+    {
+      "id": 2,
+      "fullName": "Elizabeth Bent",
+      "email": "ebent@pandp.com",
+      "isStaff": true
+    },
+    {
+      "id": 3,
+      "fullName": "Russell Hively",
+      "email": "rhively@jerky.com",
+      "isStaff": false
+    },
+    {
+      "id": 4,
+      "fullName": "Mark Williams",
+      "email": "mwilliams@gofig.com",
+      "isStaff": false
+    },
+    {
+      "id": 5,
+      "fullName": "Paul Parker",
+      "email": "pparker8@notor.co",
+      "isStaff": false
+    },
+    {
+      "id": 6,
+      "fullName": "William Darcy",
+      "email": "wdarcy9@pandp.com",
+      "isStaff": true
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "address": "484 Spring Vale Rd",
+      "phoneNumber": "304-555-5547",
+      "conflict": "He is very mean to me all the time.",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "address": "56849 Fadel Gateway",
+      "phoneNumber": "202-555-3457",
+      "conflict": "She is a pain.",
+      "userId": 3
+    },
+    {
+      "id": 3,
+      "address": "56849 Fadel Gateway",
+      "phoneNumber": "202-555-9987",
+      "conflict": "He stole my dog.",
+      "userId": 4
+    },
+    {
+      "id": 4,
+      "address": "7346 Ritchie Road",
+      "phoneNumber": "304-555-7455",
+      "conflict": "He says I stole his dog.",
+      "userId": 5
+    }
+  ],
+  "mediators": [
+    {
+      "id": 1,
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "userId": 6
+    }
+  ],
+  "mediations": [
+    {
+      "id": 1,
+      "date": "datetime",
+      "scheduledAmtTime": 2,
+      "hrRate": 200,
+      "agreementReached": true,
+      "agreement": "The parties agree"
+    },
+    {
+      "id": 1,
+      "date": "datetime",
+      "scheduledAmtTime": 3,
+      "hrRate": 200,
+      "agreementReached": true,
+      "agreement": "The parties agree"
+    }
+  ],
+  "mediationInfo": [
+    {
+      "id": 1,
+      "mediatorId": 1,
+      "clientId": 1,
+      "mediationId": 1
+    },
+    {
+      "id": 2,
+      "mediatorId": 1,
+      "clientId": 2,
+      "mediationId": 1
+    },
+    {
+      "id": 3,
+      "mediatorId": 2,
+      "clientId": 3,
+      "mediationId": 2
+    },
+    {
+      "id": 4,
+      "mediatorId": 2,
+      "clientId": 4,
+      "mediationId": 2
+    }
+  ]
+}
