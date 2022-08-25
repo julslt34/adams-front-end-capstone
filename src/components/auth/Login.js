@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Login = () => {
-    //  const [email, set] = useState("hpassfield7@netvibes.com")
+   
+
     const [email, set] = useState("")
     const navigate = useNavigate()
 
@@ -16,9 +17,9 @@ export const Login = () => {
             .then(foundUsers => {
                 if (foundUsers.length === 1) {
                     const user = foundUsers[0]
-                    sessionStorage.setItem("mediation_user", JSON.stringify({
+                    localStorage.setItem("mediation_user", JSON.stringify({
                         id: user.id,
-                        // staff: user.isStaff
+                        
                     }))
 
                     navigate("/")

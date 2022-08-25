@@ -1,43 +1,34 @@
-import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import { Docket } from "./Docket"
-import "./Dockets.css"
+import React, {useState, useEffect} from "react"
+import { DocketCard } from "./DocketCard"
+
+
+
 
 export const DocketList = () => {
+
     const [dockets, setDockets] = useState([])
-    const navigate = useNavigate()
 
-    const localMediationUser = sessionStorage.getItem("mediation_user")
-    const mediationUserObject = JSON.parse(localMediationUser)
 
-    useEffect(
-        () => {
-            fetch(`http://localhost:8088/clients`)
-            .then(response => response.json())
-            .then((docketArray) => {
-                setDockets(docketArray)
-            })   
-        },
-        [ ]
-    )
+    useEffect(() => {
+        fetch(`http://localhost:8088/users?_embed=clients`)
+        .then(response=>response.json())
+        .then(setDockets)
 
-    return <>
+    }, [])
 
-<h2>Mediation Docket List</h2>
 
-<article className="dockets">
+
+
+
+    return(
+        <>
+        <div className="ms-3">
+        <h1>Clients</h1>
         {
-            dockets.map(
-                (docket) => {
-               return <section clssName="docket">
-                <header>{docket.conflict}</header>
-               </section>
-                }
-         )
-    }
-    
-   </article> 
-   </>
+            dockets.map( client => <DocketCard key={client.id} singleDocket={client}/>)
+        }
+        </div>
 
-
+        </>
+    )
 }

@@ -1,42 +1,21 @@
- import { Routes, Route, Outlet } from "react-router-dom"
-// import { DocketList } from "../dockets/DocketList"
- 
-// import { CustomerViews } from "./CustomerViews"
-// import { EmployeeViews } from "./EmployeeViews"
-// import { CustomerList} from "./CustomerList"
-// import { CustomerDetails} from "./CustomerDetails"
+import { ClientViews } from "./ClientViews"
+import { MediatorViews } from "./MediatorViews"
+// import { ClientList} from "./ClientList"
+// import { ClientDetails} from "./ClientDetails"
 
 export const ApplicationViews = () => {
 	
-    const localMediationUser = sessionStorage.getItem("mediation_user")
+    const localMediationUser = localStorage.getItem("mediation_user")
     const mediationUserObject = JSON.parse(localMediationUser)     
     
-
-return(
-    <Routes>
-        <Route path="/" element={
-                <>
-                    <h1>VC-Resolution</h1>
-                    <div>Your conflict solutions</div>
-
-                    <Outlet />
-                </>
-            }/>
-{/* 
-            <Route path="dockets" element={ <DocketList />}  /> */}
-
-    </Routes>
-)
-
-       
-//     if (mediationUserObject.staff) {
-// //  return employee views 
-//         return <MediatorViews />
-//     }
-// else {
-//     // return customer views
-//         return <ClientViews />
-//     }
+    if (mediationUserObject.staff) {
+//  return mediatior views 
+        return <MediatorViews />
+    }
+else {
+    // return client views
+        return <ClientViews />
+    }
 }
 
 
@@ -46,29 +25,56 @@ return(
 
 
 
-
-
-
-
-
-
-// import { Outlet, Route, Routes } from "react-router-dom"
-// import { DocketList } from "../dockets/DocketList"
+//  import { Routes, Route, Outlet } from "react-router-dom"
+// // import { DocketList } from "../dockets/DocketList"
+ 
+// // import { ClientViews } from "./ClientViews"
+// // import { MediatorViews } from "./MediaatorViews"
+// // import { ClientList} from "./ClientList"
+// // import { ClientDetails} from "./ClientDetails"
 
 // export const ApplicationViews = () => {
-// 	return (
-//         <Routes>
-//             <Route path="/" element={
+	
+//     const localMediationUser = localStorage.getItem("mediation_user")
+//     const mediationUserObject = JSON.parse(localMediationUser)     
+    
+
+// return(
+//     <Routes>
+//         <Route path="/" element={
 //                 <>
 //                     <h1>VC-Resolution</h1>
-//                     <div>Your conflict solution</div>
+//                     <div>Your conflict solutions</div>
 
 //                     <Outlet />
 //                 </>
-//             }>
+//             }/>
+// {/* 
+//             <Route path="dockets" element={ <DocketList />}  /> */}
 
-//                 <Route path="dockets" element={ <DocketList /> } />
-//             </Route>
-//         </Routes>
-//     )
+//     </Routes>
+// )
+
+       
+// //     if (mediationUserObject.staff) {
+// // //  return mediator views 
+// //         return <MediatorViews />
+// //     }
+// // else {
+// //     // return client views
+// //         return <ClientViews />
+// //     }
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-// import { DocketForm } from "../dockets/DocketForm"
-// import { DocketContainer } from "../dockets/DocketContainer"
+import { DocketForm } from "../dockets/DocketForm"
+import { DocketContainer } from "../dockets/DocketContainer"
 import { MediatorList } from "../mediators/MediatorList"
 import { ClientList } from "../clients/ClientList"
 import { ClientDetails } from "../clients/ClientDetails"
@@ -28,3 +28,4 @@ export const MediatorViews = () => {
         </Routes>
     )
 }
+
