@@ -1,187 +1,187 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "fullName": "Mary Hively",
-      "email": "mhively0@singer.com",
-      "isStaff": false
-    },
-    {
-      "id": 2,
-      "fullName": "Elizabeth Bent",
-      "email": "ebent@pandp.com",
-      "isStaff": true
-    },
-    {
-      "id": 3,
-      "fullName": "Russell Hively",
-      "email": "rhively@jerky.com",
-      "isStaff": false
-    },
-    {
-      "id": 4,
-      "fullName": "Mark Williams",
-      "email": "mwilliams@gofig.com",
-      "isStaff": false
-    },
-    {
-      "id": 5,
-      "fullName": "Paul Parker",
-      "email": "pparker8@notor.co",
-      "isStaff": false
-    },
-    {
-      "id": 6,
-      "fullName": "William Darcy",
-      "email": "wdarcy9@pandp.com",
-      "isStaff": true
-    },
-    {
-      "email": "jgidley@hotmail.com",
-      "fullName": "June Gidley",
-      "isStaff": false,
-      "id": 7
-    },
-    {
-      "email": "bmax@hotmail.com",
-      "fullName": "Bob Maxey",
-      "isStaff": false,
-      "id": 8
-    }
-  ],
-  "clients": [
-    {
-      "id": 1,
-      "address": "111 Standard st",
-      "phoneNumber": "304-555-5548",
-      "conflict": "He is very mean to me all the time.",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "address": "629 Twig Ave",
-      "phoneNumber": "202-555-3457",
-      "conflict": "She is a pain.",
-      "userId": 3
-    },
-    {
-      "id": 3,
-      "address": "56849 Fadel Gateway",
-      "phoneNumber": "202-555-9987",
-      "conflict": "He stole my dog.",
-      "userId": 4
-    },
-    {
-      "id": 4,
-      "address": "7346 Ritchie Road",
-      "phoneNumber": "304-555-7455",
-      "conflict": "He says I stole his dog.",
-      "userId": 5
-    }
-  ],
-  "mediators": [
-    {
-      "id": 1,
-      "specialty": "Family/Divorce",
-      "rate": 300,
-      "userId": 2
-    },
-    {
-      "id": 2,
-      "specialty": "Civil disputes",
-      "rate": 310,
-      "userId": 6
-    }
-  ],
-  "mediations": [
-    {
-      "id": 1,
-      "date": "datetime",
-      "scheduledAmtTime": 2,
-      "hrRate": 200,
-      "agreementReached": true,
-      "agreement": "The parties agree"
-    },
-    {
-      "id": 1,
-      "date": "datetime",
-      "scheduledAmtTime": 3,
-      "hrRate": 200,
-      "agreementReached": true,
-      "agreement": "The parties agree"
-    }
-  ],
-  "mediationInfo": [
-    {
-      "id": 1,
-      "mediatorId": 1,
-      "clientId": 1,
-      "mediationId": 1
-    },
-    {
-      "id": 2,
-      "mediatorId": 1,
-      "clientId": 2,
-      "mediationId": 1
-    }
-  ],
-  "docketTickets": [
-    {
-      "id": 1,
-      "userId": 1,
-      "description": "culpa",
-      "emergency": false,
-      "dateCompleted": ""
-    },
-    {
-      "id": 2,
-      "userId": 3,
-      "description": "mea",
-      "emergency": true,
-      "dateCompleted": ""
-    },
-    {
-      "id": 3,
-      "userId": 4,
-      "description": "sorry",
-      "emergency": false,
-      "dateCompleted": ""
-    },
-    {
-      "id": 4,
-      "userId": 5,
-      "description": "always there",
-      "emergency": true,
-      "dateCompleted": ""
-    },
-    {
-      "userId": 7,
-      "description": "Just trying to fix it",
-      "dateCompleted": "",
-      "id": 5,
-      "emergency": true
-    }
-  ],
-  "mediatiorTickets": [
-    {
-      "id": 1,
-      "mediatorId": 1,
-      "docketTicketId": 1
-    },
-    {
-      "id": 2,
-      "mediatorId": 2,
-      "docketTicketId": 2
-    },
-    {
-      "id": 3,
-      "mediatorId": 1,
-      "docketTicketId": 3
-    },
-    {
-      "mediatorId": 2,
-      "docketTicketId": 4,
-      "id": 4
-    }
-  ]
-}
+    "users": [
+      {
+        "id": 1,
+        "fullName": "Mary Hively",
+        "email": "mhively0@singer.com",
+        "isStaff": false
+      },
+      {
+        "id": 2,
+        "fullName": "Elizabeth Bent",
+        "email": "ebent@pandp.com",
+        "isStaff": true
+      },
+      {
+        "id": 3,
+        "fullName": "Russell Hively",
+        "email": "rhively@jerky.com",
+        "isStaff": false
+      },
+      {
+        "id": 4,
+        "fullName": "Mark Williams",
+        "email": "mwilliams@gofig.com",
+        "isStaff": false
+      },
+      {
+        "id": 5,
+        "fullName": "Paul Parker",
+        "email": "pparker8@notor.co",
+        "isStaff": false
+      },
+      {
+        "id": 6,
+        "fullName": "William Darcy",
+        "email": "wdarcy9@pandp.com",
+        "isStaff": true
+      },
+      {
+        "email": "jgidley@hotmail.com",
+        "fullName": "June Gidley",
+        "isStaff": false,
+        "id": 7
+      },
+      {
+        "email": "bmax@hotmail.com",
+        "fullName": "Bob Maxey",
+        "isStaff": false,
+        "id": 8
+      }
+    ],
+    "clients": [
+      {
+        "id": 1,
+        "address": "111 Standard st",
+        "phoneNumber": "304-555-5548",
+        "conflict": "He is very mean to me all the time.",
+        "userId": 1
+      },
+      {
+        "id": 2,
+        "address": "629 Twig Ave",
+        "phoneNumber": "202-555-3457",
+        "conflict": "She is a pain.",
+        "userId": 3
+      },
+      {
+        "id": 3,
+        "address": "56849 Fadel Gateway",
+        "phoneNumber": "202-555-9987",
+        "conflict": "He stole my dog.",
+        "userId": 4
+      },
+      {
+        "id": 4,
+        "address": "7346 Ritchie Road",
+        "phoneNumber": "304-555-7455",
+        "conflict": "He says I stole his dog.",
+        "userId": 5
+      }
+    ],
+    "mediators": [
+      {
+        "id": 1,
+        "specialty": "Family/Divorce",
+        "rate": 300,
+        "userId": 2
+      },
+      {
+        "id": 2,
+        "specialty": "Civil disputes",
+        "rate": 310,
+        "userId": 6
+      }
+    ],
+    "mediations": [
+      {
+        "id": 1,
+        "date": "datetime",
+        "scheduledAmtTime": 2,
+        "hrRate": 200,
+        "agreementReached": true,
+        "agreement": "The parties agree"
+      },
+      {
+        "id": 1,
+        "date": "datetime",
+        "scheduledAmtTime": 3,
+        "hrRate": 200,
+        "agreementReached": true,
+        "agreement": "The parties agree"
+      }
+    ],
+    "mediationInfo": [
+      {
+        "id": 1,
+        "mediatorId": 1,
+        "clientId": 1,
+        "mediationId": 1
+      },
+      {
+        "id": 2,
+        "mediatorId": 1,
+        "clientId": 2,
+        "mediationId": 1
+      }
+    ],
+    "docketTickets": [
+      {
+        "id": 1,
+        "userId": 1,
+        "description": "culpa",
+        "emergency": false,
+        "dateCompleted": ""
+      },
+      {
+        "id": 2,
+        "userId": 3,
+        "description": "mea",
+        "emergency": true,
+        "dateCompleted": ""
+      },
+      {
+        "id": 3,
+        "userId": 4,
+        "description": "sorry",
+        "emergency": false,
+        "dateCompleted": ""
+      },
+      {
+        "id": 4,
+        "userId": 5,
+        "description": "always there",
+        "emergency": true,
+        "dateCompleted": ""
+      },
+      {
+        "userId": 7,
+        "description": "Just trying to fix it",
+        "dateCompleted": "",
+        "id": 5,
+        "emergency": true
+      }
+    ],
+    "mediatiorTickets": [
+      {
+        "id": 1,
+        "mediatorId": 1,
+        "docketTicketId": 1
+      },
+      {
+        "id": 2,
+        "mediatorId": 2,
+        "docketTicketId": 2
+      },
+      {
+        "id": 3,
+        "mediatorId": 1,
+        "docketTicketId": 3
+      },
+      {
+        "mediatorId": 2,
+        "docketTicketId": 4,
+        "id": 4
+      }
+    ]
+  }
