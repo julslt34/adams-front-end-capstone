@@ -8,9 +8,9 @@ export const ClientNav = () => {
         <ul className="navbar">
 {/* shows Docket link in the client nav bar */}
 
-            <li className="navbar__item active">
+            {/* <li className="navbar__item active">
                 <Link className="navbar__link" to="/dockets">Dockets</Link>
-            </li>
+            </li> */}
             <li className="navbar__item logout">
                 <Link className="navbar__link" to="/profile">Profile</Link>
             </li>

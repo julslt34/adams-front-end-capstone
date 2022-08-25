@@ -1,13 +1,13 @@
 .clients {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .client {
-    background-color: hotpink;
-    border: 2px dotted orangered;
+    background-color: rgb(20, 184, 202);
+    border: 2px dotted rgb(20, 133, 208);
     color: black;
     padding: 0,5rem;
     margin: 0.5rem

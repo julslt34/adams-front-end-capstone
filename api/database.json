@@ -4,6 +4,8 @@
         "id": 1,
         "fullName": "Mary Hively",
         "email": "mhively0@singer.com",
+        "specialty": "Family/Divorce",
+        "rate": 300,
         "isStaff": false
       },
       {

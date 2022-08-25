@@ -19,8 +19,8 @@ return(
         <div onClick={() => linkInfo(clientInfo)}>
         {/* <div> Name: {clientObject.fullName}</div>  */}
         <Link className="navbar__link" to={`/clients/${clientObject.userId}`}>Name: {clientObject.user.fullName}</Link>
-        {/* <div> Address: {clientObject.address}</div>
-        <div> Phone: {clientObject.phoneNumber}</div> */}
+        
+        <div> Phone: {clientObject.phoneNumber}</div>
         {/* {clientInfo ? <ClientDetails clientObject={clientObject} /> : null} */}
         
         </div>

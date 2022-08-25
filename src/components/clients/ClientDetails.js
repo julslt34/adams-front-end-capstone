@@ -24,17 +24,32 @@ export const ClientDetails = ({ clientObject}) => {
         []
     )
 
-    return <section className="client">
+    return <>
+    <h4>CLIENT INFORMATION</h4>
+    { <section className="client">
+    
                <header className="client__header"> {clientDetails?.user?.fullName}</header>
                <div>Phone: {clientDetails?.phoneNumber}</div>
                 <div>Address: {clientDetails?.address}</div>
-                <div>Email: {clientDetails?.user?.email}</div>
-              
+                <div>Email: {clientDetails?.user?.email}</div>            
            
-    </section>
+    </section>}
+    <br></br>
+    <h4>CLIENT STATEMENT ABOUT DISAGREEMENT</h4>
+    { <section className="client">
+               
+                <div> {clientDetails?.conflict}</div>                   
+           
+    </section>}
+
+    </>
     
+
     
 }
+
+
+
 
 //     useEffect(() => {
 //         fetch("http://localhost:8088/clients?_expand=user")
