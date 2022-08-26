@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { MediationsForm } from "../mediations/MediationsForm"
 
 export const ClientDetails = ({ clientObject}) => {  
     const [clientDetails, setClientDetails ] = useState({})
 
     const {clientId} = useParams()
+// 
 
-
-
+// 
     useEffect (
         () => {
             
-            fetch(`http://localhost:8088/clients?_expand=user&userId=${clientId}`)           
+            fetch(`http://localhost:8088/clients?_expand=user&userId=${clientId}`)    
+                   
             .then(response => response.json())
             .then((data) => {
                 console.log("this is data", data)
@@ -25,26 +27,46 @@ export const ClientDetails = ({ clientObject}) => {
     )
 
     return <>
-    <h4>CLIENT INFORMATION</h4>
+    <h4>CLIENTS INFORMATION</h4>
     { <section className="client">
     
-               <header className="client__header"> {clientDetails?.user?.fullName}</header>
-               <div>Phone: {clientDetails?.phoneNumber}</div>
-                <div>Address: {clientDetails?.address}</div>
-                <div>Email: {clientDetails?.user?.email}</div>            
+               <header className="client__header"> {clientDetails?.fullName1}</header>
+               <div>Phone: {clientDetails?.phoneNumber1}</div>
+                <div>Address: {clientDetails?.address1}</div>
+                <div>Email: {clientDetails?.email1}</div>            
+           
+    </section>}
+    { <section className="client">
+    
+               <header className="client__header"> {clientDetails?.fullName2}</header>
+               <div>Phone: {clientDetails?.phoneNumber2}</div>
+                <div>Address: {clientDetails?.address2}</div>
+                <div>Email: {clientDetails?.email2}</div>            
            
     </section>}
     <br></br>
-    <h4>CLIENT STATEMENT ABOUT DISAGREEMENT</h4>
+    <h4>CLIENTS STATEMENTS ABOUT DISAGREEMENT</h4>
     { <section className="client">
                
-                <div> {clientDetails?.conflict}</div>                   
+                <div>{clientDetails?.fullName1} -  {clientDetails?.conflict1}</div>       
+
+                <div>{clientDetails?.fullName2} -  {clientDetails?.conflict2}</div>                   
            
     </section>}
-
-    </>
+    <br></br>
+    <h4>MEDIATION NOTES</h4>
     
 
+    {/* {
+
+     <MediationsForm />
+     } */}
+
+               <div><MediationsForm /></div>      
+            
+          
+   
+    </>
     
 }
 

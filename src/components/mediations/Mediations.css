@@ -1,26 +1,11 @@
-.navbar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-}
-
-.navbar__item {
-    flex-basis: 20%;
-    list-style-type: none;
-}
-
-.navbar__logout {
-    margin-left: auto;
-}
-
-.clients {
+.notes {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.navbar {
+.note {
     background-color: rgb(20, 184, 202);
     border: 2px dotted rgb(20, 133, 208);
     color: black;

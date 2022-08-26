@@ -4,8 +4,11 @@ import "./NavBar.css"
 export const NavBar = () => {
     const navigate = useNavigate()
 
-    return (
-        <ul className="navbar">
+    return <>
+     <ul className="navbar">
+        <h3>VC-RESOLUTION</h3> 
+        
+       
             {/* <li className="navbar__item active">
                 <Link className="navbar__link" to="/dockets">Dockets</Link>
             </li> */}
@@ -29,7 +32,7 @@ export const NavBar = () => {
                     : ""
             }
         </ul>
-    )
+     </>
 }
 
 
