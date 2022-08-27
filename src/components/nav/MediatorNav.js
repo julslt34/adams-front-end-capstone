@@ -7,7 +7,7 @@ export const MediatorNav = () => {
     return (
         <ul className="navbar">
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/tickets">Dockets</Link>
+                <Link className="navbar__link" to="/dockets">Dockets</Link>
             </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/mediators">Mediators</Link>

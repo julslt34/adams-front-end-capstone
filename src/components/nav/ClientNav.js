@@ -6,6 +6,8 @@ export const ClientNav = () => {
 
     return (
         <ul className="navbar">
+{/* shows Docket link in the client nav bar */}
+
             {/* <li className="navbar__item active">
                 <Link className="navbar__link" to="/dockets">Dockets</Link>
             </li> */}

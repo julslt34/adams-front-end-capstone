@@ -69,6 +69,23 @@ export const Register = (props) => {
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
                 </fieldset>
+                <fieldset>
+                    <label htmlFor="address"> Address </label>
+                    <input onChange={updateClient}
+                        type="text" id="address" className="form-control"
+                        placeholder="Address" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="phoneNumber"> Phone number </label>
+                    <input onChange={updateClient}
+                        type="text" id="phoneNumber" className="form-control"
+                        placeholder="Phone Number" required />
+                </fieldset>
+
+
+
+
+
                 {/* <fieldset>
                     <input onChange={(evt) => {
                         const copy = {...client}
