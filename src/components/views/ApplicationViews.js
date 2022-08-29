@@ -12,6 +12,7 @@ import { ClientDetails } from "../clients/ClientDetails"
 import { DocketEdit } from "../dockets/DocketEdit"
 import { MediationsList } from "../mediations/MediationsList"
 import { MediationsForm } from "../mediations/MediationsForm"
+import { MediationsEdit } from "../mediations/MediationsEdit"
 
 
 
@@ -34,13 +35,20 @@ export const ApplicationViews = () => {
 <Route path="casenotess/edit/:docketId" element={ <DocketEdit/> } />
                 
                 <Route path="dockets/edit/:docketId" element={ <DocketEdit/> } />
-               <Route path="dockets" element={ <DocketList />}  />
+                <Route path="dockets/edit/:clientId" element={ <MediationsEdit/> } />
+               <Route path="mediations" element={ <DocketList />}  />
                <Route path="profile" element={ <Profile />}  />
                <Route path="docket/create" element={ <DocketForm /> } />
-               <Route path="clients/:clientId" element={ <ClientDetails />}  />
+               <Route path="clients/:clientId/" element={ <ClientDetails />}  />
                <Route path="clients" element={ <ClientList />}  />
-               <Route path="/mediations" element={ <MediationsList />}  />    
-               <Route path="/clients" element={ <MediationsForm />}  />  
+               <Route path="clients/:clientId/" element={ <MediationsList />}  />  
+               <Route path="clients/:clientId/schedule" element={ <MediationsForm />}  /> 
+
+
+               {/* <Route path="/clients/:clientId/form" element={ <MediationsForm />}  />  */}
+
+
+               {/* <Route path="/clients" element={ <MediationsForm />}  />  */}
                
             </Route>
         </Routes>

@@ -4,7 +4,8 @@ import { useNavigate, useParams } from "react-router-dom"
 export const MediationsEdit = () => {
     const [mediation, update] = useState({
         casenote: "",
-    });
+        dateOf: ""
+    })
     
     const navigate = useNavigate()
     const { mediationId } = useParams()
@@ -16,7 +17,7 @@ export const MediationsEdit = () => {
             .then((data) => {
                 update(data)
             })
-    }, [mediationId]);
+    }, [ mediationId ]);
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
@@ -26,20 +27,21 @@ export const MediationsEdit = () => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(note)
+            body: JSON.stringify(mediation)
         })
             .then(response => response.json())
             .then(() => {
-                navigate("/")
+                navigate("/clients/:id")
+                // navigate("/clients")
             });
     };
 
 
-    return <form className="noteEditForm">
-        <h2 className="noteEditForm__title"></h2>
+    return <form className="mediationForm">
+        <h2 className="mediationForm__title"></h2>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="note"></label>
+                <label htmlFor="note">Edit Note</label>
                 <textarea
                     required autoFocus
                     type="text"
@@ -49,7 +51,7 @@ export const MediationsEdit = () => {
                         (evt) => {
                             const copy = { ...mediation }
                             copy.casenote = evt.target.value
-                            update(copy)
+                           update(copy)
                         }
                     }>{mediation.casenote}</textarea>
             </div>

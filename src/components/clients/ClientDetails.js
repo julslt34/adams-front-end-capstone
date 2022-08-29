@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
+import { Mediations } from "../mediations/Mediations"
 import { MediationsForm } from "../mediations/MediationsForm"
+import { MediationsList } from "../mediations/MediationsList"
+
 
 export const ClientDetails = ({ clientObject}) => {  
     const [clientDetails, setClientDetails ] = useState({})
-
+   
     const {clientId} = useParams()
+
+  const navigate = useNavigate()  
+
 // 
 
 // 
     useEffect (
         () => {
             
-            fetch(`http://localhost:8088/clients?_expand=user&userId=${clientId}`)    
+            fetch(`http://localhost:8088/clients/${clientId}?/_expand=user`)    
                    
             .then(response => response.json())
             .then((data) => {
                 console.log("this is data", data)
-                const singleClient = data[0]
+                const singleClient = data
                 console.log(singleClient)
                 console.log(clientId)
                 setClientDetails(singleClient)
@@ -54,17 +60,44 @@ export const ClientDetails = ({ clientObject}) => {
            
     </section>}
     <br></br>
-    <h4>MEDIATION NOTES</h4>
+    {/* <h4>MEDIATION NOTES</h4> */}
+    {/* added to test after simple page */}
+
     
+    {/* <article className="taskDisplay">
 
-    {/* {
+<header>
+    <h2>Mediations</h2>
+</header>
+<section>
+    <Mediations />
+</section>
+<section>
+    <button onClick={() => navigate ("/clients/clientsId")}>Create New Task</button>
+</section>
 
-     <MediationsForm />
-     } */}
+</article> */}
 
-               <div><MediationsForm /></div>      
-            
-          
+
+   {/*added above after simple page  */}
+
+               {/* <div><MediationsForm /></div>      
+         */}
+                   
+         {/* this is done after simple form */}
+         
+         
+         <div><MediationsList /></div>  
+         
+         <button onClick={() => navigate(`/clients/${clientId}/schedule`)}>Create Note</button>
+
+           {/* <button onClick={() => navigate("note/create")}>Create Note</button> */}
+
+         {/* <button onClick={() => navigate("/clients/:clientId.id/note/create")}>Create Note</button> */}
+
+         {/* <button onClick={() => navigate("/note/create")}>Edit Note</button> */}
+
+{/* above is done after simple form */}        
    
     </>
     

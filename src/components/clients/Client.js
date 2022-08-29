@@ -18,7 +18,7 @@ return(
     <section className="client" key={`client--${clientObject.id}`}>
         <div onClick={() => linkInfo(clientInfo)}>
         {/* <div> Name: {clientObject.fullName}</div>  */}
-        <Link className="navbar__link" to={`/clients/${clientObject.userId}`}>Parties: {clientObject.fullName1} / {clientObject.fullName2}</Link>
+        <Link className="navbar__link" to={`/clients/${clientObject.id}`}>Parties: {clientObject.fullName1} / {clientObject.fullName2}</Link>
         
         <div> Phone: {clientObject.phoneNumber1} / {clientObject.phoneNumber2}</div>
         {/* {clientInfo ? <ClientDetails clientObject={clientObject} /> : null} */}

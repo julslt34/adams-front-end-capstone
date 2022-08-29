@@ -8,7 +8,9 @@ export const ClientList = () => {
 
     useEffect(
         () => {
-            fetch("http://localhost:8088/clients?_expand=user")
+              fetch("http://localhost:8088/clients?_expand=user")
+
+
             // fetch('http://localhost:8088/users?isStaff=false')   
             .then(response => response.json())
                 // .then(setClients)

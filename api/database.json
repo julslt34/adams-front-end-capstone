@@ -43,33 +43,33 @@
       "phoneNumber2": "304-555-7455",
       "conflict1": "He stole my dog.",
       "conflict2": "He says I stole his dog.",
-      "userId": 2
+      "userId": 1
     }
   ],
   "mediations": [
     {
       "id": 1,
       "clientId": 1,
-      "date": "datetime",
-      "scheduledAmtTime": 2,
-      "hrRate": 300,
-      "agreementReached": true,
-      "agreement": "The parties agree"
+      "dateOf": "2020-12-12",
+      "amtBilled": "400",
+      "casenote": "testing to see if it works"
     },
     {
       "id": 2,
       "clientId": 2,
-      "date": "datetime",
-      "scheduledAmtTime": 3,
-      "hrRate": 300,
-      "agreementReached": true,
-      "agreement": "The parties agree"
+      "dateOf": "2020-12-12",
+      "amtBilled": "600",
+      "casenote": "testing"
     },
     {
-      "clientId": 1,
-      "casenote": "Hello",
-      "dateOf": "2020-11-11",
+      "casenote": "",
+      "dateOf": "",
       "id": 3
+    },
+    {
+      "casenote": "",
+      "dateOf": "",
+      "id": 4
     }
   ],
   "casenotes": [
