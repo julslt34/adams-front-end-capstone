@@ -1,15 +1,18 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+// import { Client } from "../clients/Client"
 
+// const clientObject = Client
 export const MediationsForm = () => {
 
-    const localMediatonUser = localStorage.getItem("mediation_user")
-    const mediationUserObject = JSON.parse(localMediatonUser)
+    const localMediationUser = localStorage.getItem("mediation_user")
+    const mediationUserObject = JSON.parse(localMediationUser)
 
     const [mediation, update] = useState({
         // userId: mediationUserObject.id,
-        casenote: "",
-        dateOf: "mm/dd/yyyy"        
+        casenote: "",        
+        dateOf: "mm/dd/yyyy",  
+        amtBilled: ""      
     })
 
     const navigate = useNavigate()
@@ -40,7 +43,7 @@ export const MediationsForm = () => {
 
 
                     
-                navigate("clients/note/create/")
+                navigate("clients/")
                     // navigate("/clients/note/form")
             })
 
@@ -127,18 +130,19 @@ export const MediationsForm = () => {
                 </div>
             </fieldset>
 
-
+{/* 
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Submit Note
                            
-            </button>
-            
-            {/* <button onClick={() => navigate("/clients/1")}>Submit Note</button> */}
+            </button> */}
 
-
-
+ <button onClick={() => navigate(`/clients/${localMediationUser.id}`)}>Submit Note</button>
+          
+          
+          
+          
         </form>
         
     </>

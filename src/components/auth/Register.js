@@ -4,14 +4,27 @@ import "./Login.css"
 
 export const Register = (props) => {
     const [client, setClient] = useState({
-        email: "",
-        fullName: "",
-        isStaff: false
+        // email: "",
+        // fullName: "",
+        // isStaff: false
+
+       
+        fullName1: "",
+        fullName2: "",
+        email1: "",
+        email2: "",
+        address1: "",
+        address2: "",
+        phoneNumber1: "",
+        phoneNumber2: "",
+        conflict1: ""
+        // conflict2: "",
+       
     })
     let navigate = useNavigate()
 
     const registerNewUser = () => {
-        return fetch("http://localhost:8088/users", {
+        return fetch("http://localhost:8088/clients", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -60,26 +73,57 @@ export const Register = (props) => {
                 <fieldset>
                     <label htmlFor="fullName"> Full Name </label>
                     <input onChange={updateClient}
-                           type="text" id="fullName" className="form-control"
-                           placeholder="Enter your name" required autoFocus />
+                           type="text" id="fullName1" className="form-control"
+                           placeholder="Enter your full name" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="email"> Email address </label>
                     <input onChange={updateClient}
-                        type="email" id="email" className="form-control"
-                        placeholder="Email address" required />
+                        type="email" id="email1" className="form-control"
+                        placeholder="Enter your email address" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="address"> Address </label>
                     <input onChange={updateClient}
-                        type="text" id="address" className="form-control"
-                        placeholder="Address" required />
+                        type="text" id="address1" className="form-control"
+                        placeholder="Enter your address" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="phoneNumber"> Phone number </label>
                     <input onChange={updateClient}
-                        type="text" id="phoneNumber" className="form-control"
-                        placeholder="Phone Number" required />
+                        type="text" id="phoneNumber1" className="form-control"
+                        placeholder="Enter your Phone Number" required />
+                </fieldset>
+               
+                <fieldset>
+                    <label htmlFor="fullName">Opposing Party's Full Name </label>
+                    <input onChange={updateClient}
+                           type="text" id="fullName2" className="form-control"
+                           placeholder="Enter the other party's name" required autoFocus />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="email"> Opposing Party's email address </label>
+                    <input onChange={updateClient}
+                        type="email" id="email2" className="form-control"
+                        placeholder="Enter the other party's email address" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="address"> Opposing Party's address </label>
+                    <input onChange={updateClient}
+                        type="text" id="address2" className="form-control"
+                        placeholder="Enter the other party's address" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="phoneNumber"> Opposing Party's phone number </label>
+                    <input onChange={updateClient}
+                        type="text" id="phoneNumber2" className="form-control"
+                        placeholder="Enter the other party's Phone Number" required />
+                </fieldset>
+ <fieldset>
+                    <label htmlFor="conflict"> What is the conflict about in your on words </label>
+                    <input onChange={updateClient}
+                        type="text" id="conflict1" className="form-control"
+                        placeholder="Brief summary" required />
                 </fieldset>
 
 

@@ -53,10 +53,13 @@ export const ClientDetails = ({ clientObject}) => {
     <br></br>
     <h4>CLIENTS STATEMENTS ABOUT DISAGREEMENT</h4>
     { <section className="client">
-               
+
+    <div> {clientDetails?.conflict1}</div>
+        
+{/*                
                 <div>{clientDetails?.fullName1} -  {clientDetails?.conflict1}</div>       
 
-                <div>{clientDetails?.fullName2} -  {clientDetails?.conflict2}</div>                   
+                <div>{clientDetails?.fullName2} -  {clientDetails?.conflict2}</div>                    */}
            
     </section>}
     <br></br>

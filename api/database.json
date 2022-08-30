@@ -28,7 +28,6 @@
       "phoneNumber1": "304-555-5548",
       "phoneNumber2": "202-555-3457",
       "conflict1": "He is very mean to me all the time.",
-      "conflict2": "She is a pain.",
       "userId": 1
     },
     {
@@ -42,8 +41,20 @@
       "phoneNumber1": "202-555-9987",
       "phoneNumber2": "304-555-7455",
       "conflict1": "He stole my dog.",
-      "conflict2": "He says I stole his dog.",
       "userId": 1
+    },
+    {
+      "fullName1": "j adams",
+      "fullName2": "lee joop",
+      "email1": "jad@jso.com",
+      "email2": "dke@ddd.com",
+      "address1": "33th st",
+      "address2": "345 smie st",
+      "phoneNumber1": "555-555-9999",
+      "phoneNumber2": "555-555-6644",
+      "conflict1": "we dont likee each other",
+      "id": 3,
+      "userId": 3
     }
   ],
   "mediations": [
@@ -60,16 +71,6 @@
       "dateOf": "2020-12-12",
       "amtBilled": "600",
       "casenote": "testing"
-    },
-    {
-      "casenote": "",
-      "dateOf": "",
-      "id": 3
-    },
-    {
-      "casenote": "",
-      "dateOf": "",
-      "id": 4
     }
   ],
   "casenotes": [
