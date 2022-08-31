@@ -25,13 +25,17 @@
 // }
 
 
-
+import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { MediationsEdit } from "./MediationsEdit"
 
 export const MediationsList = () => {
     const [mediations, setMediations] = useState([])
-    
+   
+    const {clientId} = useParams()
+
+    const navigate = useNavigate()  
+
      useEffect(
         () => {           
     fetch(`http://localhost:8088/mediations`)
@@ -52,12 +56,15 @@ export const MediationsList = () => {
         {
             mediations.map(
                 (mediation) => {
-                    return <section className="note">
+                    return<>
+                     <section className="note">
                         <header>NOTES: {mediation.casenote}</header><br></br>
                         <header>MEDIATION DATE & TIME: {mediation.dateOf}</header><br></br>
                         <header>AMOUNT BILLED: ${mediation.amtBilled}</header>
+                        <br></br>
+                        <button onClick={() => navigate (`/clients/${clientId}/edit`)}>Edit Note</button>
                     </section>
-                    
+                    </>
                 }
          )
     }

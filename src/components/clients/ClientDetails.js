@@ -5,7 +5,7 @@ import { MediationsForm } from "../mediations/MediationsForm"
 import { MediationsList } from "../mediations/MediationsList"
 
 
-export const ClientDetails = ({ clientObject}) => {  
+export const ClientDetails = () => {  
     const [clientDetails, setClientDetails ] = useState({})
    
     const {clientId} = useParams()
@@ -56,49 +56,27 @@ export const ClientDetails = ({ clientObject}) => {
 
     <div> {clientDetails?.conflict1}</div>
         
-{/*                
-                <div>{clientDetails?.fullName1} -  {clientDetails?.conflict1}</div>       
-
-                <div>{clientDetails?.fullName2} -  {clientDetails?.conflict2}</div>                    */}
            
     </section>}
     <br></br>
-    {/* <h4>MEDIATION NOTES</h4> */}
-    {/* added to test after simple page */}
-
-    
-    {/* <article className="taskDisplay">
-
-<header>
-    <h2>Mediations</h2>
-</header>
-<section>
-    <Mediations />
-</section>
-<section>
-    <button onClick={() => navigate ("/clients/clientsId")}>Create New Task</button>
-</section>
-
-</article> */}
-
-
-   {/*added above after simple page  */}
-
-               {/* <div><MediationsForm /></div>      
-         */}
-                   
-         {/* this is done after simple form */}
+   
          
          
          <div><MediationsList /></div>  
          
          <button onClick={() => navigate(`/clients/${clientId}/schedule`)}>Create Note</button>
+        
+         {/* <button onClick={() => navigate (`/clients/${clientId}/edit`)}>Edit Note</button> */}
+
+ {/* <button onClick={() => navigate("/note/create")}>Edit Note</button> */}
+
+
 
            {/* <button onClick={() => navigate("note/create")}>Create Note</button> */}
 
          {/* <button onClick={() => navigate("/clients/:clientId.id/note/create")}>Create Note</button> */}
 
-         {/* <button onClick={() => navigate("/note/create")}>Edit Note</button> */}
+        
 
 {/* above is done after simple form */}        
    

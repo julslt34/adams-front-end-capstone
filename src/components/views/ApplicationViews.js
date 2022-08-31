@@ -35,7 +35,7 @@ export const ApplicationViews = () => {
 <Route path="casenotess/edit/:docketId" element={ <DocketEdit/> } />
                 
                 <Route path="dockets/edit/:docketId" element={ <DocketEdit/> } />
-                <Route path="dockets/edit/:clientId" element={ <MediationsEdit/> } />
+                <Route path="clients/:clientId/edit" element={ <MediationsEdit/> } />
                <Route path="mediations" element={ <DocketList />}  />
                <Route path="profile" element={ <Profile />}  />
                <Route path="docket/create" element={ <DocketForm /> } />

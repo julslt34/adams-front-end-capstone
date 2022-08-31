@@ -1,6 +1,8 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
+
 // import { Client } from "../clients/Client"
+
 
 // const clientObject = Client
 export const MediationsForm = () => {
@@ -10,23 +12,24 @@ export const MediationsForm = () => {
 
     const [mediation, update] = useState({
         // userId: mediationUserObject.id,
+        clientId: "",        
         casenote: "",        
         dateOf: "mm/dd/yyyy",  
         amtBilled: ""      
     })
 
     const navigate = useNavigate()
-
+    const {clientId} = useParams()
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
             console.log("i was clicked")
         const eventToSendToApi = {
-            // clientId: mediationUserObject.id,
-                clientId: mediation.clientId,
+            //  clientId: mediationUserObject.id,
+               clientId: clientId,
                 casenote: mediation.casenote,
-                // dateOf: mediation.dateOf,
-                dateOf: "",
+                dateOf: mediation.dateOf,
+                // dateOf: "",
                 amtBilled: mediation.amtBilled,
             }
     
@@ -43,7 +46,7 @@ export const MediationsForm = () => {
 
 
                     
-                navigate("clients/")
+                navigate(`/clients/${clientId}`)
                     // navigate("/clients/note/form")
             })
 
@@ -118,7 +121,7 @@ export const MediationsForm = () => {
                         type="datetime-local"
                         className="meeting-time"
                         placeholder="Enter Date"
-                        value=""
+                        value={mediation.dateOf}
        min="2022-01-07T00:00" max="2023-12-14T00:00"
                         onChange={
                             (evt) => {
@@ -130,21 +133,24 @@ export const MediationsForm = () => {
                 </div>
             </fieldset>
 
-{/* 
+
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Submit Note
                            
-            </button> */}
+            </button>
 
- <button onClick={() => navigate(`/clients/${localMediationUser.id}`)}>Submit Note</button>
+ {/* <button onClick={() => navigate(`/clients/${localMediationUser.id}`)}>Submit Note</button> */}
           
-          
-          
-          
+ {/* <button onClick={() => navigate(`/clients/`)}>Submit Note</button> */}
+
+ 
+ {/* <button onClick={() => navigate(`/clients/${mediation.id}/`)}>Submit Note</button> */}
+           {/* mediation.clientId */}
+
         </form>
-        
+       
     </>
     )
 }

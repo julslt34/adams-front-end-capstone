@@ -61,8 +61,8 @@
     {
       "id": 1,
       "clientId": 1,
-      "dateOf": "2020-12-12",
-      "amtBilled": "400",
+      "dateOf": "2020-12-11",
+      "amtBilled": "100",
       "casenote": "testing to see if it works"
     },
     {
@@ -70,7 +70,7 @@
       "clientId": 2,
       "dateOf": "2020-12-12",
       "amtBilled": "600",
-      "casenote": "testing"
+      "casenote": "testing out"
     }
   ],
   "casenotes": [

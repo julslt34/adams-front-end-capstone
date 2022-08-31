@@ -12,7 +12,7 @@ export const Mediations = () => {
 
     //get all events by associated user for initial view
     useEffect(() => {
-        return fetch(`http://localhost:8088/mediations=${mediationUserObject.id}`)
+        return fetch(`http://localhost:8088/mediations?_expand=client&clientId=${mediationUserObject.id}`)
             .then(res => res.json())
             .then((mediationArray) => {
                 setMediations(mediationArray)
@@ -23,7 +23,8 @@ export const Mediations = () => {
 // test code betweeen
 
 const getAllMediations = () => {
-    fetch(`http://localhost:8088/mediations/${mediationUserObject.id}`)
+    fetch(`http://localhost:8088/mediations?_expand=client&clientId=${mediationUserObject.id}`)
+    // fetch(`http://localhost:8088/mediations/${mediationUserObject.id}`)
 .then(response => response.json())
 .then((mediationArray) => {
     setMediations(mediationArray)
@@ -33,38 +34,43 @@ const getAllMediations = () => {
 
 // function that updates task with new completed state
 
-// const completeMediation = (mediation) => {
-//     const copy = {
-//         clientId: mediation.clientId,
-//         dateOf: mediation.dateOf,
-//         casenote: mediation.casenote
-//     }
-//     fetch(`http://localhost:8088/mediations/${mediation.id}`, {
-//         method: "PUT",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(copy)
-//     })
-//         .then(response => response.json())
-//         .then(getAllMediations)
-// }
+const completeMediation = (mediation) => {
+    const copy = {
+        clientId: mediation.clientId,
+        amtBilled: mediation.amtBilled,
+        dateOf: mediation.dateOf,
+        casenote: mediation.casenote
+    }
+    fetch(`http://localhost:8088/mediations/${mediation.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(copy)
+    })
+        .then(response => response.json())
+        .then(getAllMediations)
+}
 
 // above origionally commented out
 
 return (
     <>
+    <article className="tasks">
         {
             mediations.map(mediation => 
                 <div className="note" key={`note--${mediation.id}`}>
                     <section>Casenote: {mediation.casenote}</section>
                     <section>Event Date: {mediation.dateOf}</section>
-                    <section>Casenote: {mediation.amtBilled}</section>
+                    <section>Amount Billed: {mediation.amtBilled}</section>
+
+                    
                      <button onClick={() => navigate (`/clients/${mediation.id}/edit`)}>Edit Note</button>
                      {/* <button onClick={() => navigate (`/home/edit/${mediation.id}`)}>Edit Note</button> */}
                 </div>
                 )
         }
+        </article>
     </>
 
     )
