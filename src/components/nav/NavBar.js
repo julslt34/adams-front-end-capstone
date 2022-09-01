@@ -15,11 +15,16 @@ export const NavBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/mediators">Mediators</Link>
             </li>
-            <li className="navbar__item logout">
-                <Link className="navbar__link" to="/profile">Profile</Link>
-            </li>
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/clients">Clients</Link>
+                <Link className="navbar__link" to="/register">Register Clients</Link>
+            </li>
+            
+
+            {/* <li className="navbar__item logout">
+                <Link className="navbar__link" to="/profile">Profile</Link>
+            </li> */}
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/clients">Client List</Link>
             </li>
             {
                 localStorage.getItem("mediation_user")

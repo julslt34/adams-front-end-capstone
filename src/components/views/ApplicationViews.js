@@ -1,7 +1,6 @@
 // import { ClientViews } from "./ClientViews"
 // import { MediatorViews } from "./MediatorViews"
-// import { ClientList} from "./ClientList"
-//  import { ClientDetails} from "./ClientDetails"
+
 import { Outlet, Route, Routes } from "react-router-dom"
 import { DocketForm } from "../dockets/DocketForm"
 import { DocketList } from "../dockets/DocketList"
@@ -12,6 +11,9 @@ import { ClientDetails } from "../clients/ClientDetails"
 import { DocketEdit } from "../dockets/DocketEdit"
 import { MediationsList } from "../mediations/MediationsList"
 import { MediationsForm } from "../mediations/MediationsForm"
+import { MediationsEdit } from "../mediations/MediationsEdit"
+import { ClientContainer } from "../clients/ClientContainer"
+import { ClientSearch } from "../clients/ClientSearch"
 
 
 
@@ -34,13 +36,21 @@ export const ApplicationViews = () => {
 <Route path="casenotess/edit/:docketId" element={ <DocketEdit/> } />
                 
                 <Route path="dockets/edit/:docketId" element={ <DocketEdit/> } />
-               <Route path="dockets" element={ <DocketList />}  />
+                <Route path="clients/:clientId/edit" element={ <MediationsEdit/> } />
+               <Route path="mediations" element={ <DocketList />}  />
                <Route path="profile" element={ <Profile />}  />
                <Route path="docket/create" element={ <DocketForm /> } />
-               <Route path="clients/:clientId" element={ <ClientDetails />}  />
-               <Route path="clients" element={ <ClientList />}  />
-               <Route path="/mediations" element={ <MediationsList />}  />    
-               <Route path="/clients" element={ <MediationsForm />}  />  
+               <Route path="clients/:clientId/" element={ <ClientDetails />}  />
+               {/* <Route path="clients" element={ <ClientList />}  /> */}
+               
+               <Route path="clients/:clientId/" element={ <MediationsList />}  />  
+               <Route path="clients/:clientId/schedule" element={ <MediationsForm />}  /> 
+<Route path="clients" element={ <ClientContainer/> }  />
+
+               {/* <Route path="/clients/:clientId/form" element={ <MediationsForm />}  />  */}
+
+
+               {/* <Route path="/clients" element={ <MediationsForm />}  />  */}
                
             </Route>
         </Routes>

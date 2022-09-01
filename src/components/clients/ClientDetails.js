@@ -1,23 +1,47 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
+import { Mediations } from "../mediations/Mediations"
 import { MediationsForm } from "../mediations/MediationsForm"
+import { MediationsList } from "../mediations/MediationsList"
+import { Client } from "./Client"
 
-export const ClientDetails = ({ clientObject}) => {  
+
+export const ClientDetails = 
+() => {  
+    // ({searchTermState}) => {  
     const [clientDetails, setClientDetails ] = useState({})
-
+    const [filteredClients, setFiltered] = useState([])
     const {clientId} = useParams()
-// 
+
+  const navigate = useNavigate()  
 
 // 
+// const localMediationUser = localStorage.getItem("mediation_user")
+// const mediationUserObject = JSON.parse(localMediationUser)
+// 
+// test for searching
+// useEffect(
+//     () => {
+//         const searchedclientDetails = clientDetails.filter(clientDetail => {
+//             return clientDetail.fullName1.toLowerCase().startsWith(searchTermState.toLowerCase())
+//          } )
+//         setFiltered(searchedclientDetails)
+//     },
+//     [ searchTermState ]
+// )
+
+// test for searching
+
+
     useEffect (
         () => {
             
-            fetch(`http://localhost:8088/clients?_expand=user&userId=${clientId}`)    
+            fetch(`http://localhost:8088/clients/${clientId}?/_expand=user`)    
                    
             .then(response => response.json())
             .then((data) => {
                 console.log("this is data", data)
-                const singleClient = data[0]
+                const singleClient = data
                 console.log(singleClient)
                 console.log(clientId)
                 setClientDetails(singleClient)
@@ -25,6 +49,13 @@ export const ClientDetails = ({ clientObject}) => {
         },
         []
     )
+
+    // useEffect(() => {
+    //     const myclientDetails = clientDetails.filter(clientDetail => clientDetail.userId === mediationUserObject.id)
+    //     setFiltered(myclientDetails)
+    //      },
+    //      [clientDetails]
+    //  )
 
     return <>
     <h4>CLIENTS INFORMATION</h4>
@@ -47,24 +78,32 @@ export const ClientDetails = ({ clientObject}) => {
     <br></br>
     <h4>CLIENTS STATEMENTS ABOUT DISAGREEMENT</h4>
     { <section className="client">
-               
-                <div>{clientDetails?.fullName1} -  {clientDetails?.conflict1}</div>       
 
-                <div>{clientDetails?.fullName2} -  {clientDetails?.conflict2}</div>                   
+    <div> {clientDetails?.conflict1}</div>
+        
            
     </section>}
     <br></br>
-    <h4>MEDIATION NOTES</h4>
-    
+   
+         
+         
+         <div><MediationsList /></div>  
+         
+         <button onClick={() => navigate(`/clients/${clientId}/schedule`)}>Create Note</button>
+        
+         {/* <button onClick={() => navigate (`/clients/${clientId}/edit`)}>Edit Note</button> */}
 
-    {/* {
+ {/* <button onClick={() => navigate("/note/create")}>Edit Note</button> */}
 
-     <MediationsForm />
-     } */}
 
-               <div><MediationsForm /></div>      
-            
-          
+
+           {/* <button onClick={() => navigate("note/create")}>Create Note</button> */}
+
+         {/* <button onClick={() => navigate("/clients/:clientId.id/note/create")}>Create Note</button> */}
+
+        
+
+{/* above is done after simple form */}        
    
     </>
     
