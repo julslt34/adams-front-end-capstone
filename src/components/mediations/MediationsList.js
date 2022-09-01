@@ -31,14 +31,22 @@ import { MediationsEdit } from "./MediationsEdit"
 
 export const MediationsList = () => {
     const [mediations, setMediations] = useState([])
+    // const [filteredmediations, setFiltered] = useState([])
    
-    const {clientId} = useParams()
-
+    const {clientId} = useParams()    
+    console.log(clientId)
     const navigate = useNavigate()  
+
+    // test inbetweeen
+    
+    // test inbetween
 
      useEffect(
         () => {           
-    fetch(`http://localhost:8088/mediations`)
+     fetch(`http://localhost:8088/mediations?clientId=${clientId}`)
+
+    // fetch(`http://localhost:8088/clients`)
+
                 .then(response => response.json())
                 .then((mediationArray) => {
                     setMediations(mediationArray)
@@ -46,6 +54,15 @@ export const MediationsList = () => {
 },
 []
      )
+
+// test code
+// useEffect(() => {
+//    const myMediations = mediations.filter(mediation => mediation.userId === mediationUserObject.id)
+//    setFiltered(myMediations)
+//     },
+//     [mediations]
+// )
+// test code
 
     return <>
    

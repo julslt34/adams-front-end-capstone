@@ -30,7 +30,7 @@ const getAllMediations = () => {
     setMediations(mediationArray)
 })
 }
-// between comment out markers in simpler version was commented out
+
 
 // function that updates task with new completed state
 

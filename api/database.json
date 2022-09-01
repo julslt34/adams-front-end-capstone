@@ -12,8 +12,7 @@
       "fullName": "William Darcy",
       "email": "wdarcy9@pandp.com",
       "specialty": "Civil disputes",
-      "rate": 310,
-      "isStaff": true
+      "rate": 310
     }
   ],
   "clients": [
@@ -41,7 +40,7 @@
       "phoneNumber1": "202-555-9987",
       "phoneNumber2": "304-555-7455",
       "conflict1": "He stole my dog.",
-      "userId": 1
+      "userId": 2
     },
     {
       "fullName1": "j adams",
@@ -54,7 +53,59 @@
       "phoneNumber2": "555-555-6644",
       "conflict1": "we dont likee each other",
       "id": 3,
-      "userId": 3
+      "userId": 2
+    },
+    {
+      "fullName1": "Charlie Brown",
+      "fullName2": "Lucy Vanpelt",
+      "email1": "cbrown@peanuts.com",
+      "email2": "lvp@peanuts.com",
+      "address1": "2222 house st",
+      "address2": "444 house street",
+      "phoneNumber1": "555-444-3333",
+      "phoneNumber2": "444-333-4444",
+      "conflict1": "She always pulls the football",
+      "userId": "2",
+      "id": 4
+    },
+    {
+      "fullName1": "Jack Hill",
+      "fullName2": "Jill Hill",
+      "email1": "jh@nr.com",
+      "email2": "jh@dontfall.com",
+      "address1": "488 Mound st",
+      "address2": "5555 fall lane",
+      "phoneNumber1": "555-222-3322",
+      "phoneNumber2": "555-111-1212",
+      "conflict1": "Jack said Jill pushed him then acted like she fell",
+      "userId": "1",
+      "id": 5
+    },
+    {
+      "fullName1": "Jon Doe",
+      "fullName2": "Jane Doe",
+      "email1": "whoami@idontknow.com",
+      "email2": "guesswho@iseeu.com",
+      "address1": "111 mystery lane",
+      "address2": "112 lost st",
+      "phoneNumber1": "555-555-8888",
+      "phoneNumber2": "555-112-3333",
+      "conflict1": "They don't know who each other are",
+      "userId": "1",
+      "id": 6
+    },
+    {
+      "fullName1": "Pete Coop",
+      "fullName2": "Treat Fleet",
+      "email1": "Petec@djdj.com",
+      "email2": "fleet@myway.com",
+      "address1": "90 parker st",
+      "address2": "454 topohil ave",
+      "phoneNumber1": "555-555-6543",
+      "phoneNumber2": "555-555-6632",
+      "conflict1": "They think they are both right",
+      "userId": "2",
+      "id": 7
     }
   ],
   "mediations": [
@@ -62,15 +113,29 @@
       "id": 1,
       "clientId": 1,
       "dateOf": "2020-12-11",
-      "amtBilled": "100",
-      "casenote": "testing to see if it works"
+      "amtBilled": "22",
+      "casenote": "testing to see if it works completely"
     },
     {
       "id": 2,
       "clientId": 2,
       "dateOf": "2020-12-12",
       "amtBilled": "600",
-      "casenote": "testing out"
+      "casenote": "testing "
+    },
+    {
+      "clientId": "2",
+      "casenote": "spon",
+      "dateOf": "2022-08-31T11:30",
+      "amtBilled": "25",
+      "id": 3
+    },
+    {
+      "clientId": "1",
+      "casenote": "Test in place",
+      "dateOf": "2022-08-31T11:43",
+      "amtBilled": "100",
+      "id": 4
     }
   ],
   "casenotes": [

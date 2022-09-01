@@ -5,6 +5,10 @@ import { Client } from "./Client"
 
 export const ClientList = () => {
     const [clients, setClients] = useState([])
+const [filteredClients, setFiltered] = useState([])
+
+    const localMediationUser = localStorage.getItem("mediation_user")
+     const mediationUserObject = JSON.parse(localMediationUser)
 
     useEffect(
         () => {
@@ -20,12 +24,17 @@ export const ClientList = () => {
             },
         [])
     
-    
+//     useEffect(() => {
+//    const myClients = clients.filter(client => client.userId === mediationUserObject.id)
+//    setFiltered(myClients)
+//     },
+//     [clients]
+// )
 
         return (
             <>
             <div className = "clients">
-                <h1>Clients</h1>
+                <h2>Clients</h2>
             {
              clients.map(client =>{
                 return (<Client key= {client.id} clientObject={client}/>)

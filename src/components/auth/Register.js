@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
+
 export const Register = (props) => {
     const [client, setClient] = useState({
         // email: "",
@@ -17,7 +18,8 @@ export const Register = (props) => {
         address2: "",
         phoneNumber1: "",
         phoneNumber2: "",
-        conflict1: ""
+        conflict1: "",
+        userId: ""
         // conflict2: "",
        
     })
@@ -36,7 +38,7 @@ export const Register = (props) => {
                 if (createdUser.hasOwnProperty("id")) {
                     localStorage.setItem("mediation_user", JSON.stringify({
                         id: createdUser.id,
-                        staff: createdUser.isStaff
+                        // staff: createdUser.isStaff
                     }))
 
                     navigate("/")
@@ -69,34 +71,34 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for VC-Resolution</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Client Registration</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
+                    <label htmlFor="fullName"> Client's Full Name </label>
                     <input onChange={updateClient}
                            type="text" id="fullName1" className="form-control"
-                           placeholder="Enter your full name" required autoFocus />
+                           placeholder="Enter client's full name" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="email"> Email address </label>
                     <input onChange={updateClient}
                         type="email" id="email1" className="form-control"
-                        placeholder="Enter your email address" required />
+                        placeholder="Enter client's email address" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="address"> Address </label>
                     <input onChange={updateClient}
                         type="text" id="address1" className="form-control"
-                        placeholder="Enter your address" required />
+                        placeholder="Enter client's address" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="phoneNumber"> Phone number </label>
                     <input onChange={updateClient}
                         type="text" id="phoneNumber1" className="form-control"
-                        placeholder="Enter your Phone Number" required />
+                        placeholder="Enter client's Phone Number" required />
                 </fieldset>
                
                 <fieldset>
-                    <label htmlFor="fullName">Opposing Party's Full Name </label>
+                    <label htmlFor="fullName">Opposing Client's Full Name </label>
                     <input onChange={updateClient}
                            type="text" id="fullName2" className="form-control"
                            placeholder="Enter the other party's name" required autoFocus />
@@ -119,12 +121,19 @@ export const Register = (props) => {
                         type="text" id="phoneNumber2" className="form-control"
                         placeholder="Enter the other party's Phone Number" required />
                 </fieldset>
- <fieldset>
-                    <label htmlFor="conflict"> What is the conflict about in your on words </label>
+                <fieldset>
+                    <label htmlFor="conflict"> Clients description of the dispute </label>
                     <input onChange={updateClient}
                         type="text" id="conflict1" className="form-control"
                         placeholder="Brief summary" required />
                 </fieldset>
+                <fieldset>
+                    <label htmlFor="userId"> Mediator Numbers::     1 - (Elizabeth Bent)   2- (William Darcy)   </label>
+                    <input onChange={updateClient}
+                        type="number" id="userId" className="form-control"
+                        placeholder="Pick a mediator number" required />
+                </fieldset>
+
 
 
 

@@ -7,13 +7,14 @@ import { MediationsList } from "../mediations/MediationsList"
 
 export const ClientDetails = () => {  
     const [clientDetails, setClientDetails ] = useState({})
-   
+    const [filteredClients, setFiltered] = useState([])
     const {clientId} = useParams()
 
   const navigate = useNavigate()  
 
 // 
-
+// const localMediationUser = localStorage.getItem("mediation_user")
+// const mediationUserObject = JSON.parse(localMediationUser)
 // 
     useEffect (
         () => {
@@ -31,6 +32,13 @@ export const ClientDetails = () => {
         },
         []
     )
+
+    // useEffect(() => {
+    //     const myclientDetails = clientDetails.filter(clientDetail => clientDetail.userId === mediationUserObject.id)
+    //     setFiltered(myclientDetails)
+    //      },
+    //      [clientDetails]
+    //  )
 
     return <>
     <h4>CLIENTS INFORMATION</h4>
