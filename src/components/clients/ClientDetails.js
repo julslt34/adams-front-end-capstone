@@ -3,9 +3,12 @@ import { useParams, useNavigate } from "react-router-dom"
 import { Mediations } from "../mediations/Mediations"
 import { MediationsForm } from "../mediations/MediationsForm"
 import { MediationsList } from "../mediations/MediationsList"
+import { Client } from "./Client"
 
 
-export const ClientDetails = () => {  
+export const ClientDetails = 
+() => {  
+    // ({searchTermState}) => {  
     const [clientDetails, setClientDetails ] = useState({})
     const [filteredClients, setFiltered] = useState([])
     const {clientId} = useParams()
@@ -16,6 +19,20 @@ export const ClientDetails = () => {
 // const localMediationUser = localStorage.getItem("mediation_user")
 // const mediationUserObject = JSON.parse(localMediationUser)
 // 
+// test for searching
+// useEffect(
+//     () => {
+//         const searchedclientDetails = clientDetails.filter(clientDetail => {
+//             return clientDetail.fullName1.toLowerCase().startsWith(searchTermState.toLowerCase())
+//          } )
+//         setFiltered(searchedclientDetails)
+//     },
+//     [ searchTermState ]
+// )
+
+// test for searching
+
+
     useEffect (
         () => {
             
