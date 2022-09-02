@@ -136,6 +136,13 @@
       "dateOf": "2022-08-31T11:43",
       "amtBilled": "100",
       "id": 4
+    },
+    {
+      "clientId": "3",
+      "casenote": "",
+      "dateOf": "mm/dd/yyyy",
+      "amtBilled": "",
+      "id": 5
     }
   ],
   "casenotes": [

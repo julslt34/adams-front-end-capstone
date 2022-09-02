@@ -3,23 +3,39 @@
 
 /*Typography
 --------------------------------------------------------------*/
+
+/* this is for the font color for login title and color and size for login button */
 body,
 button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #fe7607;
   font-family: "Comfortaa", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.5;
 }
-
+html {
+  height: 100%;
+}
 body {
     padding: 0 3rem;
-}
+    /* background-color: #c31532; */
+/* this makes the login page bacground red */
+    /* background-color:rgb(183, 21, 21); */
+    background-color:rgb(247, 241, 241);
 
+    /* background-image: linear-gradient(to  left, #888181, rgb(126, 121, 120)); */
+ 
+    /* adds texture to the body */
+ background-image: repeating-linear-gradient(-319deg, rgba(255, 255, 255, 0.722), rgb(211, 195, 195) 1px, transparent 3px, transparent 15px);
+    background-size: 4px;
+/* adds texture to the body */
+    background-image: linear-gradient(to bottom right, #ef7f0e, #d4d7df00, #fbf7fa00, rgba(250, 247, 246, 0));
+}
+/* headings font */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Patua One", serif;
+  font-family:Comfortaa, Arial, sans-serif;
   letter-spacing: 2px;
 }
 

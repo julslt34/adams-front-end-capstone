@@ -13,9 +13,9 @@ code {
 }
 
 .feedback {
-  border: 1px dotted cadetblue;
+  border: 1px dotted rgb(16, 233, 114);
   padding: 1rem;
-  background-color: rgb(218, 230, 247);
+  background-color: rgb(5, 22, 45);
   position: absolute;
   top: 20%;
   left: 50%;
@@ -33,9 +33,9 @@ code {
 }
 
 .error {
-  border: 1px dotted rgb(107, 21, 4);
+  border: 1px dotted rgb(7, 107, 4);
   padding: 1rem;
-  background-color: rgb(255, 229, 228);
+  background-color: rgb(19, 219, 106);
 }
 
 @keyframes slideDown {

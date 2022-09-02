@@ -131,7 +131,7 @@ export const Register = (props) => {
                     <label htmlFor="userId"> Mediator Numbers::     1 - (Elizabeth Bent)   2- (William Darcy)   </label>
                     <input onChange={updateClient}
                         type="number" id="userId" className="form-control"
-                        placeholder="Pick a mediator number" required />
+                        placeholder="Pick a mediator" required />
                 </fieldset>
 
 

@@ -6,7 +6,7 @@ export const NavBar = () => {
 
     return <>
      <ul className="navbar">
-        <h3>VC-RESOLUTION</h3> 
+        <h2>VC-RESOLUTION</h2> 
         
        
             {/* <li className="navbar__item active">
@@ -18,7 +18,9 @@ export const NavBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/register">Register Clients</Link>
             </li>
-            
+            {/* <li className="navbar__item active">
+                <button className="navbar__link" to="/register">Register Clients</button>
+            </li> */}
 
             {/* <li className="navbar__item logout">
                 <Link className="navbar__link" to="/profile">Profile</Link>
