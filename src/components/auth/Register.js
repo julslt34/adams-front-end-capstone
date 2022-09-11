@@ -71,7 +71,7 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Client Registration</h1>
+                <h2 className="h3 mb-3 font-weight-normal">Client Registration</h2>
                 <fieldset>
                     <label htmlFor="fullName"> Client's Full Name </label>
                     <input onChange={updateClient}
@@ -131,7 +131,7 @@ export const Register = (props) => {
                     <label htmlFor="userId"> Mediator Numbers::     1 - (Elizabeth Bent)   2- (William Darcy)   </label>
                     <input onChange={updateClient}
                         type="number" id="userId" className="form-control"
-                        placeholder="Pick a mediator number" required />
+                        placeholder="Pick a mediator" required />
                 </fieldset>
 
 
