@@ -6,7 +6,7 @@ export const MediatorList = () => {
 
     useEffect(
         () => {
-            fetch (`http://localhost:8088/users?isStaff=true`)
+            fetch (`http://localhost:8088/users?`)
                 .then(response => response.json())
                 .then((mediatorArray) => {
                     setMediators(mediatorArray)
@@ -21,6 +21,10 @@ export const MediatorList = () => {
                 return <section className= "mediator" jet={`mediator--${mediator.id}`}>
                     <div>Name: {mediator.fullName}</div>
                     <div>Email: {mediator.email}</div>
+                    <div>Address: {mediator.address}</div>
+                    <div>Phone Number: {mediator.phoneNumber}</div>
+                    <div>Specialty: {mediator.specialty}</div>
+                    <div>Hourly Rate: ${mediator.rate}</div>
                 </section>
             })    
         }

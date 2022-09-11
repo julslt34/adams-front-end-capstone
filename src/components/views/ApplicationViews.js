@@ -14,7 +14,7 @@ import { MediationsForm } from "../mediations/MediationsForm"
 import { MediationsEdit } from "../mediations/MediationsEdit"
 import { ClientContainer } from "../clients/ClientContainer"
 import { ClientSearch } from "../clients/ClientSearch"
-
+import { MediatorList } from "../mediators/MediatorList"
 
 
 
@@ -45,8 +45,8 @@ export const ApplicationViews = () => {
                
                <Route path="clients/:clientId/" element={ <MediationsList />}  />  
                <Route path="clients/:clientId/schedule" element={ <MediationsForm />}  /> 
-<Route path="clients" element={ <ClientContainer/> }  />
-
+<Route path="/" element={ <ClientContainer/> }  />
+<Route path="/mediatorList" element={ <MediatorList />}  /> 
                {/* <Route path="/clients/:clientId/form" element={ <MediationsForm />}  />  */}
 
 

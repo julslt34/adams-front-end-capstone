@@ -4,6 +4,8 @@
       "id": 1,
       "fullName": "Elizabeth Bent",
       "email": "ebent@pandp.com",
+      "address": "122 Peace Ave",
+      "phoneNumber": "555-555-1111",
       "specialty": "Family/Divorce",
       "rate": 300
     },
@@ -11,6 +13,8 @@
       "id": 2,
       "fullName": "William Darcy",
       "email": "wdarcy9@pandp.com",
+      "address": "700 Tranquility way",
+      "phoneNumber": "555-555-9900",
       "specialty": "Civil disputes",
       "rate": 310
     }
@@ -106,6 +110,45 @@
       "conflict1": "They think they are both right",
       "userId": "2",
       "id": 7
+    },
+    {
+      "fullName1": "Morticia Adams",
+      "fullName2": "Gomez Adams",
+      "email1": "madams@deadroses.com",
+      "email2": "CreepyDude@Cemetry.com",
+      "address1": "111 Dark Hill Dr",
+      "address2": "433 Spider Dr",
+      "phoneNumber1": "555-555-0003",
+      "phoneNumber2": "555-543-7654",
+      "conflict1": "He likes to bite and she won't let him throw knives at her",
+      "userId": "2",
+      "id": 8
+    },
+    {
+      "fullName1": "Robin Hood",
+      "fullName2": "Maid Marion",
+      "email1": "rfromtt@merrymen.com",
+      "email2": "castlediva@allaboutme.com",
+      "address1": "332 Sherwood Forest",
+      "address2": "9889 Big House on the hill",
+      "phoneNumber1": "555-324-3211",
+      "phoneNumber2": "5555-009-4444",
+      "conflict1": "he says she is a snot and she thinks he should take her out more",
+      "userId": "1",
+      "id": 9
+    },
+    {
+      "fullName1": "harry potter",
+      "fullName2": "heomoinie",
+      "email1": "hogwarts@hpcom",
+      "email2": "hhh@ddd.com",
+      "address1": "dddd",
+      "address2": "ddd",
+      "phoneNumber1": "555-555-6565",
+      "phoneNumber2": "555-555-6644",
+      "conflict1": "they hate each other",
+      "userId": "2",
+      "id": 10
     }
   ],
   "mediations": [
@@ -113,7 +156,7 @@
       "id": 1,
       "clientId": 1,
       "dateOf": "2020-12-11",
-      "amtBilled": "22",
+      "amtBilled": "225",
       "casenote": "testing to see if it works completely"
     },
     {
@@ -125,9 +168,9 @@
     },
     {
       "clientId": "2",
-      "casenote": "spon",
+      "casenote": "They don't listen to each other",
       "dateOf": "2022-08-31T11:30",
-      "amtBilled": "25",
+      "amtBilled": "250",
       "id": 3
     },
     {
@@ -143,6 +186,20 @@
       "dateOf": "mm/dd/yyyy",
       "amtBilled": "",
       "id": 5
+    },
+    {
+      "clientId": "8",
+      "casenote": "They are scary but nice",
+      "dateOf": "2022-09-02T11:41",
+      "amtBilled": "350",
+      "id": 6
+    },
+    {
+      "clientId": "1",
+      "casenote": "Have to meet again",
+      "dateOf": "2022-09-02T14:29",
+      "amtBilled": "200",
+      "id": 7
     }
   ],
   "casenotes": [

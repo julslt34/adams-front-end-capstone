@@ -13,7 +13,7 @@ export const NavBar = () => {
                 <Link className="navbar__link" to="/dockets">Dockets</Link>
             </li> */}
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/mediators">Mediators</Link>
+                <Link className="navbar__link" to="/mediatorList">Mediators</Link>
             </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/register">Register Clients</Link>
@@ -26,7 +26,7 @@ export const NavBar = () => {
                 <Link className="navbar__link" to="/profile">Profile</Link>
             </li> */}
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/clients">Client List</Link>
+                <Link className="navbar__link" to="/">Client List</Link>
             </li>
             {
                 localStorage.getItem("mediation_user")
